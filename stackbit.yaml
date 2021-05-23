@@ -1,0 +1,70 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - _posts/2016-05-20-my-example-post.md
+      - _posts/2016-05-20-welcome-to-jekyll.md
+      - blog.md
+      - index.md
+      - resume.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: datetime
+        name: date
+        label: Date
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
+      - type: object
+        name: sitemap
+        label: Sitemap
+        fields:
+          - type: number
+            name: priority
+            label: Priority
+            subtype: float
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match:
+      - 2016-05-20-super-long-article.md
+      - 2016-05-20-this-post-demonstrates-post-content-styles.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: subtitle
+        label: Subtitle
+      - type: datetime
+        name: date
+        label: Date
+      - type: string
+        name: categories
+        label: Categories
+      - type: string
+        name: author
+        label: Author
+      - type: string
+        name: meta
+        label: Meta
